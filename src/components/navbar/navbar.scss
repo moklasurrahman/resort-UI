@@ -1,0 +1,219 @@
+:root{
+    --PrimaryColor : #3a4190;
+    --seconderyColor : #2a3289;
+    --iconColor: #ffffff;
+    --borderColor: #0f1231;
+    --buttonColor: #ffffff;
+    --grayText : rgb(190, 190, 190);
+    --bodyColor: #ffffff;
+    --fontColor: #ffffff;
+  
+  }
+
+
+  .navbarSection{
+    width: 100%;
+
+
+// common
+    .icon{
+        font-size: 15px;
+        color: var(--iconColor);
+        cursor: pointer;
+
+        &:hover{
+            color: var(--grayText);
+            transform: scale(1.3);
+        }
+    }
+    span{
+        display: none;
+    }
+    
+
+    .topNav{
+        display: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--PrimaryColor);
+        padding: 5px 0px;
+        border-bottom: 1px solid var(--borderColor);
+        
+      .topnavitem{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        padding: 0px 5px;    
+        .left{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            
+        }
+
+
+        .right{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+
+            .linkicon{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+            }
+            .btn{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+               
+               
+                .login{
+                    background: rgb(57, 46, 119);
+                    color: var(--fontColor);
+                    padding: 3px;
+                    border-radius: 5px;
+                    transition: 0.3s;
+                    cursor: pointer;
+                    
+                    &:hover{
+                        background: var(--buttonColor);
+                        color: var(--PrimaryColor);
+                    }
+                    
+                    .loginicon{
+                        font-size: 20px;
+                    }
+                }
+
+                .signup{
+                    background: rgb(57, 46, 119);
+                    color: var(--buttonColor);
+                    padding: 3px;
+                    border-radius: 5px;
+                    transition: 0.3s;
+                    cursor: pointer;
+                    
+                    &:hover{
+                        background: var(--buttonColor);
+                        color: var(--PrimaryColor);
+                    }
+
+                    .signupicon{
+                        font-size: 20px;
+                    }
+                }
+               
+    
+            }
+        }
+    }
+}
+
+
+}
+
+
+// for tab
+@media screen and (min-width: 769px){
+
+    .navbarSection{
+    // common
+        .icon{
+            font-size: 15px;
+           
+        }
+        span{
+            display: inline;
+            color: var(--fontColor);
+            font-size: 12px;
+        }
+        
+        .topNav{   
+          .topnavitem{
+            .left{
+                gap: 15px;
+
+                .call{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+                .mail{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+                
+            }
+    
+    
+            .right{
+                
+                .linkicon{
+                    gap: 15px;
+                }
+                .btn{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                   
+                    .login{
+                        padding: 3px 15px;
+                        border-radius: 5px;
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        border-radius: 20px;
+                        :hover{
+                            background: var(--buttonColor);
+                            color: var(--PrimaryColor);
+                        }
+
+                        span{
+                            font-size: 12px;
+                            background: transparent;
+                        }
+                        
+                        .loginicon{
+                            font-size: 10px;
+                        }
+                    }
+    
+
+                    .signup{
+                        padding: 3px 15px;
+                        border-radius: 5px;
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        border-radius: 20px;
+                        span{
+                            font-size: 12px;
+                            background: transparent;
+                        }
+                        :hover{
+                            background: var(--buttonColor);
+                            color: var(--PrimaryColor);
+                        }
+    
+                        .signupicon{
+                            font-size: 10px;
+                        }
+                    }
+                   
+        
+                }
+            }
+        }
+    }
+    
+    
+    }
+
+}

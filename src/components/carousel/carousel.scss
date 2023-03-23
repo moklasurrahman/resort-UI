@@ -1,0 +1,178 @@
+
+:root{
+    --PrimaryColor : #3a4190;
+    --seconderyColor : #2a3289;
+    --iconColor: #ffffff;
+    --borderColor: #0f1231;
+    --buttonColor: #ffffff;
+    --grayText : rgb(190, 190, 190);
+    --bodyColor: #ffffff;
+    --fontColor: #ffffff;
+  
+  }
+
+//   .slick-slide {
+//     width: auto;
+
+//     &:first-child{
+//         padding-left: 0px !important;
+//     }
+//   }
+
+
+
+.carousel{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: var(--grayText);
+        top: 0px;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        mix-blend-mode: hard-light;
+      }
+
+    .backImg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    object-fit: cover;
+    overflow: hidden;
+    margin: 0 auto;
+    }
+    
+    .CarouselItems{
+        width: 90%;
+        height: max-content;
+        display: flex;
+        row-gap: 1rem;
+        flex-direction: column;
+        align-items: stretch;
+        // justify-content: center;
+        margin: 0 auto;
+        color: var(--whiteColor);
+        padding: 30px 0px;
+        z-index: 100;
+        
+        .title{
+            padding: 0px 5px;
+            display: flex;
+            justify-content: space-between;
+            h1{
+                text-transform: uppercase;
+                font-size: 15px;
+                font-weight: 800;
+                color: var(--seconderyColor);
+            }
+            .icons{
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                justify-content: flex-end;
+                .icon{
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: var(--PrimaryColor);
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .carouselCard{
+            // display: grid;
+            // grid-template-columns: auto;
+            // overflow: hidden;
+            // width: 100%;
+            .card{
+            color: var(--borderColor);
+            background-color: var(--bodyColor);
+            align-items: center;
+            box-shadow: 0 2px 4px rgb(140, 140, 141, 0.549);
+            overflow: hidden;
+            transition: 0.5s;
+            margin: 10px 0;
+            height: auto;
+            width: 100%;                
+                .cardimg{
+                    height: 180px;
+                    width: 100%;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: 0.3s ease;
+                    }
+                }
+                
+
+               .cardbody{
+                    width: 100%;
+                    text-align: center;
+                    justify-content: center;
+                .title{
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-size: 15px;
+                    display: flex;
+                    margin: auto;
+                    justify-content: center;
+                    padding: 10px;
+                    font-weight: 800;
+                    
+                    
+                }
+               }
+
+
+            }
+        }
+    }
+
+    .btnDiv{
+        text-align: center;
+       
+        button{
+               background: var(--PrimaryColor);
+                color: var(--fontColor);
+                text-transform: uppercase;
+                font-size: 12px;
+                font-weight: 800;
+                padding: 10px 15px;
+                border-radius: 50px;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: rgb(50, 25, 141);
+                }
+
+        }
+    }
+}
+
+
+@media screen and (min-width: 769px){
+   .carousel{
+    .CarouselItems{
+        
+        padding: 80px 0px;
+       
+  }
+
+  .btnDiv{
+    margin-top: 30px;
+  }
+}
+}
